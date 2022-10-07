@@ -14,7 +14,7 @@ class BotDiarioTela:
             [tela.Radio(self.botDiario.getProb(2),'gp1', key='op2')],
             [tela.Radio(self.botDiario.getProb(3),'gp1', key='op3')],
             [tela.Radio(self.botDiario.getProb(4),'gp1', key='op4')],
-            [tela.Button('Prosseguir')]
+            [tela.Button('Prosseguir'), tela.Button('Sobre')]
             
         ]
         return tela.Window('Diario',layout = self.layout, finalize=True)
@@ -45,4 +45,9 @@ class BotDiarioTela:
                 if valores['op4'] == True:
                     tela.popup(self.botDiario.dicas(4))
                     self.botDiario.registroProb(0)
+                    
+            if janela == self.layoutMenu and eventos == 'Sobre':
+                tela.popup(self.botDiario.mostrarDados())
+                
+                
                 
