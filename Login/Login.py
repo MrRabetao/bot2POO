@@ -12,7 +12,7 @@ class Login:
             if len(password)>3:
                 self.password = password
             else:
-                ret = "Defina uma Senha válida!"
+                ret = "Defina uma Senha válida!\nCom pelo menos 4 digitos."
         else:
             ret = "Defina um nome!"
      

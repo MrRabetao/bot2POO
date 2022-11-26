@@ -5,7 +5,7 @@ class LoginTela:
     
     def __init__(self, login):
         self.login = login
-        tela.theme('Reddit')
+        tela.theme('DarkBlue15')
     
     def layoutInicial(self):
         self.layout = [
